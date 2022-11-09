@@ -14,9 +14,9 @@ def main(filename):
         for i in range(len(l1)//3):
             t = l1[0+3*i]
             t = t.replace(",", ".")
-            v = l1[1+3*i]
+            v = l1[2+3*i]
             v = v.replace(",", ".")
-            x = l1[2+3*i]
+            x = l1[1+3*i]
             x = x.replace(",", ".")
             tt.append(float(t))
             v_t.append(float(v))
@@ -25,4 +25,3 @@ def main(filename):
     return tt,x_t,v_t
 
 
-main("donneesTracker.txt")
