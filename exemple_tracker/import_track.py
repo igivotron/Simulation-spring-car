@@ -19,8 +19,8 @@ def main(filename):
             x = l1[1+3*i]
             x = x.replace(",", ".")
             tt.append(float(t))
-            v_t.append(float(v))
-            x_t.append(float(x))
+            v_t.append(abs(float(v)))
+            x_t.append(abs(float(x)))
 
     return tt,x_t,v_t
 
