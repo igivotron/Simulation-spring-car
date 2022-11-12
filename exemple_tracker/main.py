@@ -4,16 +4,17 @@ import matplotlib.pyplot as plt
 
 
 ### Paramètres ###
-v = 10 #m/s
-x = 0
-k = 0.5
+v = 2.9 #m/s
+x = 0.65
+k = 0.4
 m = 0.3
 ligma = 0.00001 # erreur acceptée
+decal = 1.2
 dt = 0.01
 filename = "donneesTracker.txt"
 
 
-v_t_sim, x_t_sim, tt_sim = ex_simu.main(x, v, ligma, k, dt, m)
+v_t_sim, x_t_sim, tt_sim = ex_simu.main(x, v, ligma, k, dt, m,decal)
 tt_track, x_t_track, v_t_track = import_track.main(filename)
 
 if __name__ == '__main__':
