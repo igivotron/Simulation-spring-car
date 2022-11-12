@@ -4,10 +4,9 @@ def force_frot_fun(v,k):
     f_fr = k*v
     return f_fr
 
-def main(x, v, ligma, k, dt, m):
+def main(x, v, ligma, k, dt, m,decal):
     v_t = [v]
     x_t = [x]
-    start = 0
     t = 0
     loop = True
     while loop:
@@ -20,6 +19,6 @@ def main(x, v, ligma, k, dt, m):
             loop = False
         t+=1
     t =t*dt
-    tt = np.arange(0,t+dt,dt)
+    tt = np.arange(decal,decal+t+dt,dt)
+    print(tt)
     return v_t, x_t, tt
-
